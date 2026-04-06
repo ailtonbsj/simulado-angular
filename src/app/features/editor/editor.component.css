@@ -1,0 +1,76 @@
+.editor-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.mb-1 { margin-bottom: 10px; }
+.mt-1 { margin-top: 10px; }
+.mt-2 { margin-top: 20px; }
+
+.field-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  margin-top: 15px;
+}
+
+.row-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+.row-item-editor {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 10px;
+}
+
+.field-label-small {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #666;
+}
+
+.dark-theme .field-label-small {
+  color: #aaa;
+}
+
+.flex-1 { flex: 1; }
+
+.panel-actions {
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+
+.dark-theme .panel-actions {
+  border-top-color: #444;
+}
+
+quill-editor {
+  display: block;
+  background: white;
+  color: black;
+}
+
+.dark-theme quill-editor {
+  background: #f0f0f0;
+}

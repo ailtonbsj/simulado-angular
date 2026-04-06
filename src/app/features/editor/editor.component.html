@@ -1,0 +1,74 @@
+<div class="editor-container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Gerador/Editor de Questões</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="actions">
+        <button mat-raised-button color="primary" (click)="addQuestion()">Nova Questão</button>
+        <button mat-stroked-button color="accent" (click)="fileInput.click()">Importar JSON</button>
+        <button mat-raised-button color="warn" [disabled]="questions().length === 0" (click)="exportJSON()">Exportar JSON</button>
+        <input type="file" #fileInput hidden (change)="importJSON($event)" accept=".json">
+      </div>
+
+      <div class="questions-list mt-2">
+        <mat-accordion multi>
+          <mat-expansion-panel *ngFor="let q of questions(); let i = index">
+            <mat-expansion-panel-header>
+              <mat-panel-title>Questão {{ i + 1 }}</mat-panel-title>
+              <mat-panel-description>
+                {{ q.type === 'multiple' ? 'Múltipla Escolha' : q.type === 'boolean' ? 'V/F' : 'Múltiplas Corretas' }}
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+
+            <div class="question-form">
+              <mat-form-field appearance="outline" class="full-width mb-1">
+                <mat-label>Tipo</mat-label>
+                <mat-select [(ngModel)]="q.type" (selectionChange)="onTypeChange(i)">
+                  <mat-option value="multiple">Múltipla Escolha (1 correta)</mat-option>
+                  <mat-option value="multiple-correct">Múltiplas Corretas</mat-option>
+                  <mat-option value="boolean">Verdadeiro ou Falso</mat-option>
+                </mat-select>
+              </mat-form-field>
+
+              <div class="field-label">Enunciado:</div>
+              <quill-editor [(ngModel)]="q.question" [modules]="quillConfig" class="mb-1"></quill-editor>
+
+              <div class="field-label">Respostas Corretas:</div>
+              <div *ngIf="q.type !== 'multiple-correct'">
+                <quill-editor [(ngModel)]="q.correct_answer" [modules]="quillConfig" class="mb-1"></quill-editor>
+              </div>
+
+              <div *ngIf="q.type === 'multiple-correct'" class="correct-answers">
+                <div *ngFor="let ca of (q.correct_answer | anyArray); let cai = index; trackBy: trackByFn" class="row-item-editor">
+                  <div class="flex-1">
+                    <div class="field-label-small">Resposta Correta {{ cai + 1 }}</div>
+                    <quill-editor [ngModel]="ca" (ngModelChange)="updateCorrectAnswer(i, cai, $event)" [modules]="quillConfig" class="mb-1"></quill-editor>
+                  </div>
+                  <button mat-icon-button color="warn" (click)="removeCorrectAnswer(i, cai)"><mat-icon>delete</mat-icon></button>
+                </div>
+                <button mat-button (click)="addCorrectAnswer(i)">Adicionar Resposta Correta</button>
+              </div>
+
+              <div class="field-label mt-1">Respostas Incorretas:</div>
+              <div class="incorrect-answers">
+                <div *ngFor="let ia of q.incorrect_answers; let iai = index; trackBy: trackByFn" class="row-item-editor">
+                  <div class="flex-1">
+                    <div class="field-label-small">Resposta Incorreta {{ iai + 1 }}</div>
+                    <quill-editor [(ngModel)]="q.incorrect_answers[iai]" [modules]="quillConfig" class="mb-1"></quill-editor>
+                  </div>
+                  <button mat-icon-button color="warn" (click)="removeIncorrectAnswer(i, iai)"><mat-icon>delete</mat-icon></button>
+                </div>
+                <button mat-button (click)="addIncorrectAnswer(i)">Adicionar Resposta Incorreta</button>
+              </div>
+
+              <div class="panel-actions mt-1">
+                <button mat-raised-button color="warn" (click)="removeQuestion(i)">Excluir Questão</button>
+              </div>
+            </div>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

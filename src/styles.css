@@ -1,0 +1,37 @@
+@import "@angular/material/prebuilt-themes/indigo-pink.css";
+@import "quill/dist/quill.snow.css";
+
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.light-theme {
+  background-color: #fafafa;
+  color: #333;
+}
+
+.dark-theme {
+  background-color: #303030;
+  color: #fff;
+}
+
+.dark-theme .mat-drawer-container {
+  background-color: #303030;
+  color: #fff;
+}
+
+.dark-theme .mat-card {
+  background-color: #424242;
+  color: #fff;
+}
+
+.dark-theme .mat-toolbar {
+  background-color: #212121;
+}
+
+.me-5 {
+  margin-right: 5px;
+}

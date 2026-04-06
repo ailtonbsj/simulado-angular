@@ -1,0 +1,23 @@
+[
+  {
+    "type": "boolean",
+    "question": "<p>A Constituição Federal vigente, nos termos dos arts. 37 ao 41, estabelece normas de observância obrigatória pela Administração Pública direta e indireta de qualquer dos Poderes da União, dos Estados, do Distrito Federal e dos Municípios. Considerando essas normas, avalie as seguintes afirmativas e a relação proposta entre elas.</p><p>I. “A Comissão Nacional de Energia Nuclear sujeita‐se aos princípios da Legalidade, Impessoalidade, Moralidade, Publicidade e Eficiência.”</p><p>II. “A Comissão Nacional de Energia Nuclear é um órgão público integrante da Administração Pública Federal Direta.”</p><p>Assinale a alternativa <strong><u>correta</u></strong>.</p>",
+    "correct_answer": "A primeira afirmativa é verdadeira e a segunda, falsa.",
+    "incorrect_answers": [
+      "As duas afirmativas são falsas.",
+      "A primeira afirmativa é falsa e a segunda, verdadeira.",
+      "As duas afirmativas são verdadeiras e a segunda é uma justificativa da primeira.",
+      "As duas afirmativas são verdadeiras, mas a segunda não é uma justificativa da primeira."
+    ]
+  },
+  {
+    "type": "boolean",
+    "question": "<p><span style=\"background-color: rgb(255, 255, 255); color: rgb(52, 58, 64);\">O que o artigo 37 da Constituição Federal prevê?</span></p>",
+    "correct_answer": "Garantia ao servidor público civil do direito à livre associação sindical.",
+    "incorrect_answers": [
+      "Exercício do direito de greve nos termos e nos limites definidos em decreto.",
+      "Vencimentos dos cargos do Poder Legislativo e Judiciário que podem ser superiores aos pagos pelo Poder Executivo. ",
+      "Permissão de vinculação ou equiparação de espécies remuneratórias para o efeito de remuneração de pessoal do serviço público. "
+    ]
+  }
+]

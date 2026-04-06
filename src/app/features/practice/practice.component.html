@@ -1,0 +1,126 @@
+<div class="practice-container">
+  <!-- Setup Section -->
+  <mat-card *ngIf="questions().length === 0 && !isFinished()" class="full-width">
+    <mat-card-header>
+      <mat-card-title>Iniciar Prática</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Nome do Aluno</mat-label>
+        <input matInput [(ngModel)]="studentName" placeholder="Ex. João Silva">
+      </mat-form-field>
+
+      <div class="import-options">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Tipo de Importação</mat-label>
+          <mat-select [(ngModel)]="importType">
+            <mat-option value="example">Simulados prontos</mat-option>
+            <mat-option value="file">Arquivo JSON</mat-option>
+            <mat-option value="url">URL Externa</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <div [ngSwitch]="importType">
+          <mat-form-field *ngSwitchCase="'example'" appearance="outline" class="full-width">
+            <mat-label>Selecione um Exemplo</mat-label>
+            <mat-select [(ngModel)]="selectedExample">
+              <mat-option *ngFor="let ex of examples" [value]="ex.name">{{ ex.name }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <div *ngSwitchCase="'file'" class="file-input">
+            <input type="file" (change)="loadJSON('file', $event)" accept=".json">
+          </div>
+
+          <mat-form-field *ngSwitchCase="'url'" appearance="outline" class="full-width">
+            <mat-label>URL do JSON</mat-label>
+            <input matInput [(ngModel)]="importUrl" placeholder="https://exemplo.com/questoes.json">
+          </mat-form-field>
+        </div>
+
+        <button mat-raised-button color="primary" [disabled]="!studentName" (click)="loadJSON(importType)">
+          Começar Prática
+        </button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <!-- Question Section -->
+  <div *ngIf="questions().length > 0 && !isFinished()" class="question-view">
+    <mat-progress-bar mode="determinate" [value]="progress()"></mat-progress-bar>
+    <div class="progress-text">Questão {{ currentQuestionIndex() + 1 }} de {{ questions().length }}</div>
+
+    <mat-card class="mt-2">
+      <mat-card-content>
+        <div class="question-text" [innerHTML]="currentQuestion().question"></div>
+
+        <div class="options-list">
+          <!-- Multiple Choice (Single Correct) or Boolean -->
+          <mat-radio-group
+            *ngIf="currentQuestion().type !== 'multiple-correct'"
+            [ngModel]="selectedAnswers()[currentQuestionIndex()]"
+            (ngModelChange)="onAnswerChange($event)">
+            <mat-radio-button *ngFor="let opt of randomizedOptions()" [value]="opt" class="option-item">
+              <span [innerHTML]="opt"></span>
+              <mat-icon *ngIf="showAnswer() && (currentQuestion().correct_answer === opt || (isArray(currentQuestion().correct_answer) && currentQuestion().correct_answer.includes(opt)))" color="primary">check_circle</mat-icon>
+            </mat-radio-button>
+          </mat-radio-group>
+
+          <!-- Multiple Correct -->
+          <div *ngIf="currentQuestion().type === 'multiple-correct'">
+            <mat-checkbox
+              *ngFor="let opt of randomizedOptions()"
+              [checked]="isOptionSelected(opt)"
+              (change)="toggleCheckbox(opt)"
+              class="option-item">
+              <span [innerHTML]="opt"></span>
+              <mat-icon *ngIf="showAnswer() && (isArray(currentQuestion().correct_answer) && currentQuestion().correct_answer.includes(opt))" color="primary">check_circle</mat-icon>
+            </mat-checkbox>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button (click)="prevQuestion()" [disabled]="currentQuestionIndex() === 0" class="me-5">Anterior</button>
+        <button mat-raised-button color="accent" (click)="viewAnswer()" [disabled]="!selectedAnswers()[currentQuestionIndex()]"
+          class="me-5">Ver Resposta</button>
+        <button mat-raised-button color="primary" (click)="nextQuestion()" [disabled]="!showAnswer()" class="me-5">Próxima</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <!-- Results Section -->
+  <div *ngIf="isFinished()" #resultsSection class="results-view">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Resultado Final - {{ studentName }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="results-summary">
+          <div class="stats">
+            <p>Total de Questões: {{ getResults().totalQuestions }}</p>
+            <p class="text-success">Acertos: {{ getResults().correctAnswers }}</p>
+            <p class="text-error">Erros: {{ getResults().incorrectAnswers }}</p>
+            <p>Porcentagem: {{ getResults().percentage | number:'1.0-2' }}%</p>
+          </div>
+          <div class="chart-container">
+            <canvas #chartCanvas></canvas>
+          </div>
+        </div>
+
+        <div class="answers-review">
+          <h3>Revisão:</h3>
+          <div *ngFor="let ans of getResults().answers; let i = index" class="review-item" [class.correct]="ans.isCorrect" [class.incorrect]="!ans.isCorrect">
+            <strong>{{ i + 1 }}.</strong> <span [innerHTML]="ans.question"></span>
+            <p>Sua resposta: {{ ans.selected }}</p>
+            <p *ngIf="!ans.isCorrect">Incorreto</p>
+            <p *ngIf="ans.isCorrect">Correto!</p>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="downloadResults()">Baixar Resultado (PNG)</button>
+        <button mat-button (click)="questions.set([]); isFinished.set(false)">Reiniciar</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
