@@ -96,6 +96,24 @@
   border-left-color: #f44336;
 }
 
+.selected-answer-row {
+  margin: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+}
+
+.selected-list {
+  margin: 0;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.selected-list li {
+  margin-bottom: 5px;
+}
+
 .mt-2 { margin-top: 20px; }
 
 @media (max-width: 600px) {

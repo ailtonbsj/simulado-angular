@@ -111,9 +111,17 @@
           <h3>Revisão:</h3>
           <div *ngFor="let ans of res.answers; let i = index" class="review-item" [class.correct]="ans.isCorrect" [class.incorrect]="!ans.isCorrect">
             <strong>{{ i + 1 }}.</strong> <span [innerHTML]="ans.question"></span>
-            <p>Sua resposta: {{ ans.selected }}</p>
-            <p *ngIf="!ans.isCorrect">Incorreto</p>
-            <p *ngIf="ans.isCorrect">Correto!</p>
+            
+            <div class="selected-answer-row">
+              <strong>Sua resposta:</strong>
+              <span *ngIf="!isArray(ans.selected)" [innerHTML]="ans.selected || '<i>Não respondida</i>'"></span>
+              <ul *ngIf="isArray(ans.selected)" class="selected-list">
+                <li *ngFor="let s of ans.selected" [innerHTML]="s"></li>
+              </ul>
+            </div>
+
+            <p *ngIf="!ans.isCorrect" class="text-error">Incorreto</p>
+            <p *ngIf="ans.isCorrect" class="text-success">Correto!</p>
           </div>
         </div>
       </mat-card-content>
