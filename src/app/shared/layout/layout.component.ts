@@ -57,7 +57,7 @@ import { ThemeService } from '../../core/services/theme.service';
           <span>Simulado Angular</span>
           <span class="spacer"></span>
           <button mat-icon-button (click)="themeService.toggleDarkMode()">
-            <mat-icon>{{ themeService.darkMode() ? 'light_mode' : 'dark_mode' }}</mat-icon>
+            <mat-icon>{{ themeService.darkMode() ? 'light_mode' : 'bedtime' }}</mat-icon>
           </button>
         </mat-toolbar>
         <div class="content">

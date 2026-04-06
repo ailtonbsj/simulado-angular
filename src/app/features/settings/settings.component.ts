@@ -1,14 +1,16 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { ThemeService } from '../../core/services/theme.service';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-settings',
   standalone: true,
-  imports: [CommonModule, MatButtonModule, MatIconModule, MatCardModule],
+  imports: [CommonModule, FormsModule, MatButtonModule, MatIconModule, MatCardModule, MatSlideToggleModule,],
   template: `
     <div class="settings-container">
       <mat-card>
@@ -18,9 +20,7 @@ import { ThemeService } from '../../core/services/theme.service';
         <mat-card-content>
           <div class="setting-item">
             <span>Modo Escuro</span>
-            <button mat-icon-button (click)="themeService.toggleDarkMode()">
-              <mat-icon>{{ themeService.darkMode() ? 'toggle_on' : 'toggle_off' }}</mat-icon>
-            </button>
+            <mat-slide-toggle [(ngModel)]="themeService.darkMode"></mat-slide-toggle>
           </div>
         </mat-card-content>
       </mat-card>

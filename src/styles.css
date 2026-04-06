@@ -19,9 +19,14 @@ body {
 }
 
 .dark-theme .mat-drawer-container,
+.dark-theme .mat-drawer-side,
 .dark-theme mat-sidenav-container,
 .dark-theme mat-sidenav-content {
   background-color: #303030 !important;
+  color: #fff !important;
+}
+
+.dark-theme .mdc-list-item__content .mdc-list-item__primary-text {
   color: #fff !important;
 }
 
@@ -58,10 +63,37 @@ body {
   background-color: transparent !important;
 }
 
+/* Quill Editor Dark Mode */
+.dark-theme .ql-toolbar {
+  background-color: #808080 !important;
+  border-color: #555 !important;
+}
+
+.dark-theme .ql-container {
+  background-color: #fff !important;
+  color: #000 !important;
+  border-color: #555 !important;
+}
+
 /* Ensure the question text is visible */
 .dark-theme .question-text {
   color: #fff !important;
 }
+
+/* Ensure text inside basic HTML elements is white in dark mode */
+/* .dark-theme p,
+.dark-theme span:not(.ql-editor *),
+.dark-theme li,
+.dark-theme ul,
+.dark-theme ol,
+.dark-theme h1,
+.dark-theme h2,
+.dark-theme h3,
+.dark-theme h4,
+.dark-theme h5,
+.dark-theme h6 {
+  color: #fff !important;
+} */
 
 .me-5 {
   margin-right: 5px;

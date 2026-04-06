@@ -74,3 +74,18 @@ quill-editor {
 .dark-theme quill-editor {
   background: #f0f0f0;
 }
+
+/* Dark mode for expansion panels */
+.dark-theme mat-expansion-panel {
+  background-color: #424242 !important;
+  color: #fff !important;
+}
+
+.dark-theme .mat-expansion-panel-header-title,
+.dark-theme .mat-expansion-panel-header-description {
+  color: #fff !important;
+}
+
+.dark-theme .mat-expansion-panel-content {
+  color: #fff !important;
+}
