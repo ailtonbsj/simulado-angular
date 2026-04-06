@@ -39,6 +39,13 @@
   line-height: 1.5;
 }
 
+/* Force override inline styles from JSON question data in dark mode */
+:host-context(.dark-theme) .question-text,
+:host-context(.dark-theme) .question-text * {
+  background-color: transparent !important;
+  color: #fff !important;
+}
+
 .options-list {
   display: flex;
   flex-direction: column;

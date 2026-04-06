@@ -14,22 +14,53 @@ body {
 }
 
 .dark-theme {
-  background-color: #303030;
-  color: #fff;
+  background-color: #303030 !important;
+  color: #fff !important;
 }
 
-.dark-theme .mat-drawer-container {
-  background-color: #303030;
-  color: #fff;
+.dark-theme .mat-drawer-container,
+.dark-theme mat-sidenav-container,
+.dark-theme mat-sidenav-content {
+  background-color: #303030 !important;
+  color: #fff !important;
 }
 
-.dark-theme .mat-card {
-  background-color: #424242;
-  color: #fff;
+.dark-theme .mat-mdc-card {
+  background-color: #424242 !important;
+  color: #fff !important;
+}
+
+.dark-theme .mat-mdc-card-title,
+.dark-theme .mat-mdc-card-subtitle,
+.dark-theme .mat-mdc-card-content,
+.dark-theme .mat-mdc-card-header-text {
+  color: #fff !important;
 }
 
 .dark-theme .mat-toolbar {
-  background-color: #212121;
+  background-color: #212121 !important;
+  color: #fff !important;
+}
+
+.dark-theme .mat-mdc-radio-button .mdc-label,
+.dark-theme .mat-mdc-checkbox .mdc-label {
+  color: #fff !important;
+}
+
+.dark-theme .mat-mdc-form-field-label,
+.dark-theme .mat-mdc-select-value,
+.dark-theme .mat-mdc-select-placeholder,
+.dark-theme .mat-mdc-input-element {
+  color: #fff !important;
+}
+
+.dark-theme .mat-mdc-form-field {
+  background-color: transparent !important;
+}
+
+/* Ensure the question text is visible */
+.dark-theme .question-text {
+  color: #fff !important;
 }
 
 .me-5 {
