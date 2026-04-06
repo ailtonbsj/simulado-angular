@@ -89,7 +89,7 @@
   </div>
 
   <!-- Results Section -->
-  <div *ngIf="isFinished()" #resultsSection class="results-view">
+  <div *ngIf="isFinished() && results() as res" #resultsSection class="results-view">
     <mat-card>
       <mat-card-header>
         <mat-card-title>Resultado Final - {{ studentName }}</mat-card-title>
@@ -97,10 +97,10 @@
       <mat-card-content>
         <div class="results-summary">
           <div class="stats">
-            <p>Total de Questões: {{ getResults().totalQuestions }}</p>
-            <p class="text-success">Acertos: {{ getResults().correctAnswers }}</p>
-            <p class="text-error">Erros: {{ getResults().incorrectAnswers }}</p>
-            <p>Porcentagem: {{ getResults().percentage | number:'1.0-2' }}%</p>
+            <p>Total de Questões: {{ res.totalQuestions }}</p>
+            <p class="text-success">Acertos: {{ res.correctAnswers }}</p>
+            <p class="text-error">Erros: {{ res.incorrectAnswers }}</p>
+            <p>Porcentagem: {{ res.percentage | number:'1.0-2' }}%</p>
           </div>
           <div class="chart-container">
             <canvas #chartCanvas></canvas>
@@ -109,7 +109,7 @@
 
         <div class="answers-review">
           <h3>Revisão:</h3>
-          <div *ngFor="let ans of getResults().answers; let i = index" class="review-item" [class.correct]="ans.isCorrect" [class.incorrect]="!ans.isCorrect">
+          <div *ngFor="let ans of res.answers; let i = index" class="review-item" [class.correct]="ans.isCorrect" [class.incorrect]="!ans.isCorrect">
             <strong>{{ i + 1 }}.</strong> <span [innerHTML]="ans.question"></span>
             <p>Sua resposta: {{ ans.selected }}</p>
             <p *ngIf="!ans.isCorrect">Incorreto</p>

@@ -41,6 +41,8 @@ export class PracticeComponent {
   @ViewChild('resultsSection') resultsSection!: ElementRef;
   @ViewChild('chartCanvas') chartCanvas!: ElementRef;
 
+  private chart: Chart | null = null;
+
   studentName = '';
   importUrl = '';
   importType: 'file' | 'url' | 'example' = 'example';
@@ -59,6 +61,44 @@ export class PracticeComponent {
   progress = computed(() => {
     if (this.questions().length === 0) return 0;
     return (this.currentQuestionIndex() / this.questions().length) * 100;
+  });
+
+  results = computed<PracticeResult | null>(() => {
+    if (!this.isFinished()) return null;
+    
+    const questions = this.questions();
+    const selectedAnswers = this.selectedAnswers();
+    const studentName = this.studentName;
+
+    const answers = questions.map((q, idx) => {
+      const selected = selectedAnswers[idx];
+      const correct = Array.isArray(q.correct_answer) ? q.correct_answer : [q.correct_answer];
+
+      let isCorrect = false;
+      if (Array.isArray(selected)) {
+        isCorrect = selected.length === correct.length && selected.every(s => correct.includes(s));
+      } else {
+        isCorrect = correct.includes(selected as string);
+      }
+
+      return {
+        question: q.question,
+        selected: selected,
+        isCorrect: isCorrect
+      };
+    });
+
+    const correctCount = answers.filter(a => a.isCorrect).length;
+    const totalCount = questions.length;
+
+    return {
+      studentName: studentName,
+      totalQuestions: totalCount,
+      correctAnswers: correctCount,
+      incorrectAnswers: totalCount - correctCount,
+      percentage: totalCount > 0 ? (correctCount / totalCount) * 100 : 0,
+      answers: answers
+    };
   });
 
   loadJSON(type: 'file' | 'url' | 'example', event?: any) {
@@ -108,7 +148,7 @@ export class PracticeComponent {
   }
 
   shuffle(array: any[]) {
-    return array.sort(() => Math.random() - 0.5);
+    return [...array].sort(() => Math.random() - 0.5);
   }
 
   onAnswerChange(value: string | string[]) {
@@ -160,44 +200,19 @@ export class PracticeComponent {
 
   finishPractice() {
     this.isFinished.set(true);
-    setTimeout(() => this.renderChart(), 100);
-  }
-
-  getResults(): PracticeResult {
-    const answers = this.questions().map((q, idx) => {
-      const selected = this.selectedAnswers()[idx];
-      const correct = Array.isArray(q.correct_answer) ? q.correct_answer : [q.correct_answer];
-
-      let isCorrect = false;
-      if (Array.isArray(selected)) {
-        isCorrect = selected.length === correct.length && selected.every(s => correct.includes(s));
-      } else {
-        isCorrect = correct.includes(selected as string);
-      }
-
-      return {
-        question: q.question,
-        selected: selected,
-        isCorrect: isCorrect
-      };
-    });
-
-    const correctCount = answers.filter(a => a.isCorrect).length;
-    const totalCount = this.questions().length;
-
-    return {
-      studentName: this.studentName,
-      totalQuestions: totalCount,
-      correctAnswers: correctCount,
-      incorrectAnswers: totalCount - correctCount,
-      percentage: (correctCount / totalCount) * 100,
-      answers: answers
-    };
+    // Use requestAnimationFrame or enough timeout to ensure DOM is updated
+    setTimeout(() => this.renderChart(), 200);
   }
 
   renderChart() {
-    const res = this.getResults();
-    new Chart(this.chartCanvas.nativeElement, {
+    const res = this.results();
+    if (!res || !this.chartCanvas) return;
+
+    if (this.chart) {
+      this.chart.destroy();
+    }
+
+    this.chart = new Chart(this.chartCanvas.nativeElement, {
       type: 'pie',
       data: {
         labels: ['Corretas', 'Incorretas'],
@@ -208,6 +223,7 @@ export class PracticeComponent {
       },
       options: {
         responsive: true,
+        maintainAspectRatio: false,
         plugins: {
           legend: { position: 'bottom' }
         }
@@ -220,11 +236,23 @@ export class PracticeComponent {
   }
 
   async downloadResults() {
-    const element = this.resultsSection.nativeElement;
-    const canvas = await html2canvas(element);
-    const link = document.createElement('a');
-    link.download = `resultado-${this.studentName || 'estudante'}.png`;
-    link.href = canvas.toDataURL();
-    link.click();
+    if (!this.resultsSection) return;
+    
+    try {
+      const element = this.resultsSection.nativeElement;
+      const canvas = await html2canvas(element, {
+        useCORS: true,
+        scale: 2,
+        backgroundColor: '#ffffff'
+      });
+      
+      const link = document.createElement('a');
+      link.download = `resultado-${this.studentName || 'estudante'}.png`;
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+    } catch (err) {
+      console.error('Error downloading results:', err);
+      alert('Erro ao gerar o download do resultado.');
+    }
   }
 }
