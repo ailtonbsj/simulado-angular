@@ -111,7 +111,7 @@
           <h3>Revisão:</h3>
           <div *ngFor="let ans of res.answers; let i = index" class="review-item" [class.correct]="ans.isCorrect" [class.incorrect]="!ans.isCorrect">
             <strong>{{ i + 1 }}.</strong> <span [innerHTML]="ans.question"></span>
-            
+
             <div class="selected-answer-row">
               <strong>Sua resposta:</strong>
               <span *ngIf="!isArray(ans.selected)" [innerHTML]="ans.selected || '<i>Não respondida</i>'"></span>

@@ -11,7 +11,7 @@
         <input type="file" #fileInput hidden (change)="importJSON($event)" accept=".json">
       </div>
 
-      <div class="questions-list mt-2 enable-dark-theme">
+      <div class="questions-list mt-2" [ngClass]="{ 'dark-theme': themeService.isDark() }">
         <mat-accordion multi>
           <mat-expansion-panel *ngFor="let q of questions(); let i = index">
             <mat-expansion-panel-header>

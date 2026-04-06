@@ -13,18 +13,18 @@ export class ThemeService {
       if (isDark) {
         document.body.classList.add('dark-theme');
         document.body.classList.remove('light-theme');
-        setTimeout(() =>
-          document.querySelectorAll('.enable-dark-theme').forEach(el => el.classList.add('dark-theme')));
       } else {
         document.body.classList.add('light-theme');
         document.body.classList.remove('dark-theme');
-        setTimeout(() =>
-          document.querySelectorAll('.enable-dark-theme').forEach(el => el.classList.remove('dark-theme')));
       }
     });
   }
 
   toggleDarkMode() {
     this.darkMode.update(v => !v);
+  }
+
+  isDark() {
+    return this.darkMode();
   }
 }

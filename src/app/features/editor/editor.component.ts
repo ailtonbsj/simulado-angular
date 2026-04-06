@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
@@ -15,6 +15,7 @@ import Quill from 'quill';
 
 // @ts-ignore
 import ImageResize from '@mgreminger/quill-image-resize-module';
+import { ThemeService } from '../../core/services/theme.service';
 
 Quill.register('modules/imageResize', ImageResize);
 
@@ -38,6 +39,8 @@ Quill.register('modules/imageResize', ImageResize);
   styleUrls: ['./editor.component.css']
 })
 export class EditorComponent {
+  themeService = inject(ThemeService);
+
   questions = signal<Question[]>([]);
 
   quillConfig = {
@@ -136,8 +139,21 @@ export class EditorComponent {
     reader.readAsText(file);
   }
 
+  trimOneP(val: string) {
+    return val.trim().match(/<p\b[^>]*>.*?<\/p>/gi)?.length === 1 ?
+      val.trim().replace(/^<p>/g, '').replace(/<\/p>$/g, '') :
+      val.trim();
+  }
+
   exportJSON() {
-    const dataStr = JSON.stringify(this.questions(), null, 2);
+    const questions = this.questions().map(question => {
+      question.question = this.trimOneP(question.question);
+      if(typeof question.correct_answer === 'string') question.correct_answer = this.trimOneP(question.correct_answer);
+      else if(Array.isArray(question.correct_answer)) question.correct_answer = question.correct_answer.map(ans => this.trimOneP(ans));
+      question.incorrect_answers = question.incorrect_answers.map(ans => this.trimOneP(ans));
+      return question;
+    });
+    const dataStr = JSON.stringify(questions, null, 2);
     const blob = new Blob([dataStr], { type: 'application/json' });
     const url = window.URL.createObjectURL(blob);
     const link = document.createElement('a');
