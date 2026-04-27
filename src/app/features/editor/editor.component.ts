@@ -140,9 +140,10 @@ export class EditorComponent {
   }
 
   trimOneP(val: string) {
-    return val.trim().match(/<p\b[^>]*>.*?<\/p>/gi)?.length === 1 ?
+    const trimed = val.trim().match(/<p\b[^>]*>.*?<\/p>/gi)?.length === 1 ?
       val.trim().replace(/^<p>/g, '').replace(/<\/p>$/g, '') :
       val.trim();
+    return trimed.replace(/(?<!&nbsp;)&nbsp;(?!&nbsp;)/g, ' ');
   }
 
   exportJSON() {
