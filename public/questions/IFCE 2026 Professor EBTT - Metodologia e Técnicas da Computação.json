@@ -1,0 +1,332 @@
+[
+  {
+    "type": "multiple",
+    "question": "Um professor do IFCE está desenvolvendo um programa para manipular diferentes tipos de dados em um sistema acadêmico. Durante a implementação, ele precisa definir corretamente os tipos de dados primitivos utilizados no código. Assinale a alternativa que apresenta apenas tipos de dados primitivos.",
+    "correct_answer": "double, char, int.",
+    "incorrect_answers": [
+      "list, array, struct.",
+      "list, boolean, char.",
+      "vetor, matriz, int.",
+      "string, fila, double."
+    ]
+  },
+  {
+    "type": "multiple",
+    "question": "<p>Em linguagens de programação, os comandos controlam o fluxo de execução e manipulam dados. A recursividade permite que funções chamem a si mesmas para resolver problemas de forma hierárquica ou repetitiva. A esse respeito, informe se é verdadeiro (V) ou falso (F) o que se afirma a seguir e assinale a alternativa com a sequência correta.</p><p>(&nbsp;&nbsp;) O comando for é um exemplo de estrutura de repetição que executa um bloco de código várias vezes, dependendo de uma condição.</p><p>(&nbsp;&nbsp;) Em recursividade, não é necessário definir um caso-base, pois a função se encerra automaticamente após chamadas sucessivas.</p><p>(&nbsp;&nbsp;) O comando if-else permite que diferentes blocos de código sejam executados dependendo de uma condição booleana.</p><p>(&nbsp;&nbsp;) Uma função recursiva pode ser reescrita utilizando loops equivalentes, sem alterar o resultado final do programa.</p>",
+    "correct_answer": "V - F - V - V.",
+    "incorrect_answers": [
+      "V - V - F - V.",
+      "V - F - V - F.",
+      "F - F - V - V.",
+      "F - V - F - F."
+    ]
+  },
+  {
+    "type": "multiple",
+    "question": "Em estruturas de dados, algumas árvores possuem mecanismos que mantêm sua altura aproximadamente balanceada, garantindo eficiência nas operações. Assinale a alternativa que apresenta apenas exemplos de árvores balanceadas.",
+    "correct_answer": "AVL (Adelson-Velsky e Landis), Red-Black Tree.",
+    "incorrect_answers": [
+      "Árvore Genérica, BST (Binary Search Tree).",
+      "Red-Black Tree, BST (Binary Search Tree).",
+      "AVL (Adelson-Velsky e Landis), Árvore N-ária.",
+      "Árvore N-ária, Árvore Genérica."
+    ]
+  },
+  {
+    "type": "multiple",
+    "question": "Em estruturas de dados, pilhas e filas possuem operações específicas para inserção e remoção de elementos. Assinale a alternativa que apresenta, respectivamente, a operação para inserir um elemento no topo de uma pilha e remover um elemento do início de uma fila.",
+    "correct_answer": "push e dequeue",
+    "incorrect_answers": [
+      "push e pop",
+      "enqueue e dequeue",
+      "push e enqueue",
+      "pop e dequeue"
+    ]
+  },
+  {
+    "type": "multiple",
+    "question": "<p>Um professor do IFCE está orientando seus estudantes no desenvolvimento de um sistema para gerenciar registros de projetos de pesquisa e monitoria. O sistema deve utilizar uma estrutura de dados que permita inserções e remoções em qualquer posição e em que, ao alcançar o último elemento, o próximo acesso retorne ao primeiro elemento da estrutura, não havendo ponteiro nulo ao final da sequência.</p><p>Considerando essas características, a estrutura de dados adequada é a</p>",
+    "correct_answer": "lista encadeada circular.",
+    "incorrect_answers": [
+      "lista duplamente encadeada.",
+      "lista encadeada com nó descritor.",
+      "lista estática.",
+      "lista encadeada simples."
+    ]
+  },
+  {
+    "type": "multiple",
+    "question": "Em sistemas operacionais, o deadlock ocorre quando processos ficam bloqueados indefinidamente aguardando recursos mantidos por outros processos. Assinale a alternativa que apresenta uma das condições necessárias para a ocorrência de deadlock.",
+    "correct_answer": "Exclusão mútua.",
+    "incorrect_answers": [
+      "Alternância justa.",
+      "Escalonamento circular.",
+      "Execução paralela.",
+      "Preempção forçada."
+    ]
+  },
+  {
+    "type": "multiple",
+    "question": "Em sistemas operacionais, Dijkstra propôs um mecanismo de sincronização baseado em uma variável inteira manipulada pelas operações wait (P) e signal (V) para controlar o acesso a recursos compartilhados. Assinale a alternativa que identifica esse mecanismo.",
+    "correct_answer": "Semáforos.",
+    "incorrect_answers": [
+      "Monitores.",
+      "Mutex.",
+      "Variáveis de condição.",
+      "Spinlocks."
+    ]
+  },
+  {
+    "type": "multiple",
+    "question": "Um professor do IFCE está orientando estudantes no desenvolvimento de um simulador de sistema operacional. No projeto, o escalonador da CPU (Central Processing Unit) deve permitir que cada processo utilize o processador por um intervalo fixo de tempo, retornando ao final da fila de prontos caso não finalize sua execução. O algoritmo de escalonamento que atende a essa necessidade é o",
+    "correct_answer": "Round Robin.",
+    "incorrect_answers": [
+      "First-Come, First-Served (FCFS).",
+      "Shortest Job First (SJF).",
+      "escalonamento por prioridade.",
+      "Shortest Remaining Time First (SRTF)."
+    ]
+  },
+  {
+    "type": "multiple",
+    "question": "<p>Em sistemas operacionais, diferentes sistemas de arquivos são utilizados para gerenciar o armazenamento de dados, como o FAT (File Allocation Table), o NTFS (New Technology File System) e a família EXT (Extended File System). Considerando as características gerais desses sistemas de arquivos, informe se é verdadeiro (V) ou falso (F) o que se afirma a seguir e assinale a alternativa com a sequência correta.</p><p>(&nbsp;&nbsp;) O sistema FAT não possui suporte nativo a journaling para registro de alterações no sistema de arquivos.</p><p>(&nbsp;&nbsp;) O NTFS implementa mecanismo de journaling voltado à integridade do sistema de arquivos.</p><p>(&nbsp;&nbsp;) Sistemas da família EXT podem implementar journaling, como ocorre no EXT3 e no EXT4.</p><p>(&nbsp;&nbsp;) O sistema FAT oferece suporte nativo a permissões avançadas de arquivos em nível de usuário, semelhantes às implementadas no NTFS.</p>",
+    "correct_answer": "V - V - V - F.",
+    "incorrect_answers": [
+      "V - F - V - F.",
+      "F - V - V - F.",
+      "V - V - F - V.",
+      "F - F - V - V."
+    ]
+  },
+  {
+    "type": "multiple",
+    "question": "<p>Um professor do IFCE está explicando aos estudantes a organização de diretórios em sistemas operacionais. Durante a aula, ele apresenta o seguinte exemplo de identificação de arquivo:</p><blockquote>/home/usuario/arquivo.txt</blockquote><p>Sabendo que esse caminho inicia a partir do diretório raiz (“/”) e indica toda a sequência de diretórios até o arquivo, assinale a alternativa que identifica corretamente o tipo de caminho utilizado.</p>",
+    "correct_answer": "Caminho absoluto.",
+    "incorrect_answers": [
+      "Caminho relativo.",
+      "Caminho dinâmico.",
+      "Caminho variável.",
+      "Caminho local."
+    ]
+  },
+  {
+    "type": "multiple",
+    "question": "No modelo relacional, as Formas Normais definem critérios para a organização de tabelas em bancos de dados. Assinale a alternativa que apresenta corretamente uma condição para que uma relação esteja na Primeira Forma Normal (1FN).",
+    "correct_answer": "Eliminar grupos repetitivos e garantir que cada campo contenha um único valor atômico.",
+    "incorrect_answers": [
+      "Remover dependências transitivas entre atributos não chave e exigir que todos dependam diretamente da chave primária.",
+      "Eliminar dependências parciais e assegurar que todos os atributos dependam da chave primária completa.",
+      "Exigir que toda dependência funcional tenha como determinante uma superchave.",
+      "Permitir múltiplos valores no mesmo campo, desde que pertençam à mesma entidade."
+    ]
+  },
+  {
+    "type": "multiple",
+    "question": "Em Sistemas de Gerenciamento de Banco de Dados (SGBD), as transações devem obedecer às propriedades ACID (Atomicidade, Consistência, Isolamento e Durabilidade). Assinale a alternativa que descreve corretamente uma dessas propriedades.",
+    "correct_answer": "O isolamento determina que os efeitos intermediários de uma transação em execução não sejam visíveis para outras transações, respeitando o nível de isolamento configurado.",
+    "incorrect_answers": [
+      "A atomicidade garante que, uma vez iniciado o processamento de uma transação, suas operações tornem-se imediatamente visíveis para outras transações, impedindo leituras inconsistentes.",
+      "A consistência assegura que o banco de dados sempre permaneça em estado fisicamente íntegro, independentemente da correta definição de restrições ou regras de integridade.",
+      "A durabilidade garante que, durante a execução de uma transação, todas as operações sejam registradas temporariamente na memória principal antes de serem persistidas.",
+      "A atomicidade implica que partes válidas de uma transação podem ser confirmadas individualmente, desde que não violem restrições de integridade."
+    ]
+  },
+  {
+    "type": "multiple",
+    "question": "<p>Um professor do IFCE está orientando estudantes na modelagem conceitual de um banco de dados utilizando o Modelo Entidade-Relacionamento (MER) para um sistema acadêmico. No modelo, existem as entidades Projeto e Aluno, relacionadas por Participação, que registra informações da atuação do aluno no projeto e depende da associação entre essas duas entidades para existir.</p><p>Durante a orientação, o professor destaca a necessidade de definir:</p><p>(I) o número de ocorrências de uma entidade que podem se associar a outra em um relacionamento;</p><p>(II) a característica da entidade Participação no modelo descrito.</p><p>Os conceitos que correspondem aos itens I e II, respectivamente, são:</p>",
+    "correct_answer": "Cardinalidade e Entidade Fraca.",
+    "incorrect_answers": [
+      "Grau do relacionamento e Entidade Associativa.",
+      "Atributo Derivado e Entidade Forte.",
+      "Cardinalidade e Entidade Forte.",
+      "Multiplicidade e Entidade Dependente."
+    ]
+  },
+  {
+    "type": "multiple",
+    "question": "Em um Sistema de Gerenciamento de Banco de Dados (SGBD), as consultas SQL (Structured Query Language) dependem de um repositório interno que armazena metadados sobre tabelas, colunas, índices, restrições, usuários e privilégios. O componente responsável por armazenar e fornecer essas informações é denominado",
+    "correct_answer": "Dicionário de Dados.",
+    "incorrect_answers": [
+      "Gerenciador de Buffer.",
+      "Gerenciador de Transações.",
+      "Gerenciador de Logs.",
+      "Otimizador de Consultas."
+    ]
+  },
+  {
+    "type": "multiple",
+    "question": "<p>Um professor IFCE está orientando os estudantes no desenvolvimento do modelo lógico de um banco de dados para gerenciar informações acadêmicas da instituição. Durante a etapa de definição das tabelas e de suas respectivas restrições, o docente enfatiza que, no modelo relacional, toda tabela deve possuir uma chave primária que identifique unicamente cada tupla (registro). Ele reforça ainda as seguintes regras fundamentais:</p><ul><li>a chave primária não pode assumir valor nulo;</li><li>não pode haver duplicidade de valores na chave primária;</li><li>cada registro deve ser identificado de maneira única dentro da tabela.</li></ul><p>O professor explica que essas regras são essenciais para garantir a consistência estrutural do banco de dados e evitar ambiguidades na identificação dos registros.</p><p>Assinale a alternativa que apresenta corretamente o tipo de restrição envolvida nessa situação.</p>",
+    "correct_answer": "Integridade de entidade.",
+    "incorrect_answers": [
+      "Integridade referencial.",
+      "Restrição de domínio.",
+      "Integridade funcional.",
+      "Integridade transacional."
+    ]
+  },
+  {
+    "type": "multiple",
+    "question": "A reengenharia é um processo aplicado a sistemas já existentes com o propósito de compreendê-los e aprimorá-los, podendo envolver diferentes atividades técnicas ao longo de sua execução. Durante esse processo, há uma etapa específica em que o programa é analisado e as informações são extraídas a partir dele. Isso ajuda a documentar sua organização e funcionalidade. Essa etapa é denominada",
+    "correct_answer": "engenharia reversa.",
+    "incorrect_answers": [
+      "reestruturação de código.",
+      "refatoração.",
+      "manutenção evolutiva.",
+      "modernização incremental."
+    ]
+  },
+  {
+    "type": "multiple",
+    "question": "Um professor do IFCE está orientando estudantes no desenvolvimento de um sistema acadêmico utilizando um Sistema de Gerenciamento de Banco de Dados (SGBD). O professor explica que, em uma tabela chamada Servidor, que possui campos como matrícula, nome, cargo, setor e salário, usuários comuns não devem visualizar o campo salário. Para isso, o sistema disponibiliza aos usuários uma estrutura derivada da tabela original que omite esse atributo. Considerando os mecanismos de segurança em SGBDs, assinale a alternativa que apresenta corretamente o recurso utilizado nessa situação.",
+    "correct_answer": "View.",
+    "incorrect_answers": [
+      "Auditoria.",
+      "Criptografia em repouso.",
+      "Controle de log de transações.",
+      "Backup incremental."
+    ]
+  },
+  {
+    "type": "multiple",
+    "question": "Em sistemas de controle de versão como o Git, os arquivos modificados podem ser adicionados à staging area antes de serem registrados no repositório local. Qual é o comando utilizado para registrar essas alterações no histórico do repositório local?",
+    "correct_answer": "git commit",
+    "incorrect_answers": [
+      "git push",
+      "git pull",
+      "git merge",
+      "git clone"
+    ]
+  },
+  {
+    "type": "multiple",
+    "question": "<p>A atividade de testes é essencial para a garantia da qualidade de software, sendo aplicada em diferentes níveis e com objetivos distintos ao longo do ciclo de desenvolvimento. Considerando os diversos tipos de testes de software, informe se é verdadeiro (V) ou falso (F) o que se afirma a seguir e assinale a alternativa com a sequência correta.</p><p>(&nbsp;&nbsp;) O teste unitário tem por finalidade avaliar o sistema completo e integrado, verificando sua conformidade com os requisitos especificados.</p><p>(&nbsp;&nbsp;) O teste de integração tem como objetivo identificar falhas na comunicação e na interação entre módulos ou componentes do sistema.</p><p>(&nbsp;&nbsp;) O teste de regressão é realizado após modificações no sistema, com o propósito de verificar se funcionalidades previamente implementadas continuam operando corretamente.</p><p>(&nbsp;&nbsp;) O teste caixa branca fundamenta-se na análise da estrutura interna do código, considerando fluxos lógicos, decisões e caminhos de execução.</p>",
+    "correct_answer": "F - V - V - V.",
+    "incorrect_answers": [
+      "V - V - F - V.",
+      "F - V - F - V.",
+      "V - F - V - F.",
+      "F - F - V - V."
+    ]
+  },
+  {
+    "type": "multiple",
+    "question": "Um professor do IFCE orienta estudantes no desenvolvimento de um sistema para geração de relatórios acadêmicos personalizados. O sistema deve permitir a criação de relatórios contendo diferentes elementos, como capa, sumário, gráficos e tabelas. Além disso, um mesmo relatório pode possuir representações distintas, como versões simplificadas ou completas, embora o processo de construção siga uma sequência definida de etapas. Considerando os padrões de projeto (Design Patterns) da engenharia de software, assinale a alternativa que apresenta o padrão criacional que separa a construção de um objeto complexo de sua representação, permitindo gerar diferentes representações a partir do mesmo processo de construção.",
+    "correct_answer": "Builder.",
+    "incorrect_answers": [
+      "Adapter.",
+      "Decorator.",
+      "Command.",
+      "Mediator."
+    ]
+  },
+  {
+    "type": "multiple",
+    "question": "No processo de garantia da qualidade de software, as atividades de verificação e validação possuem objetivos distintos no ciclo de desenvolvimento. A respeito das características associadas a essas atividades, assinale a alternativa INCORRETA.",
+    "correct_answer": "A verificação caracteriza-se por avaliar o sistema em funcionamento, por meio da execução de testes voltados à aceitação do usuário.",
+    "incorrect_answers": [
+      "A verificação pode envolver revisões técnicas, inspeções formais e análises estáticas de artefatos produzidos durante o desenvolvimento.",
+      "A validação envolve a execução do software com o objetivo de avaliar seu comportamento frente aos requisitos e às expectativas dos usuários.",
+      "A verificação pode ser realizada por meio da análise de documentos, modelos e código-fonte, mesmo antes da execução do sistema.",
+      "A validação pode ser conduzida por meio de testes que exercitam o sistema em ambiente controlado ou operacional."
+    ]
+  },
+  {
+    "type": "multiple",
+    "question": "<p>Um professor IFCE está orientando estudantes no desenvolvimento de um sistema especialista para apoio à tomada de decisão em processos acadêmicos. Durante a explicação, o docente destaca que, nesse sistema, o programa é construído por meio da declaração de fatos e regras, enquanto um mecanismo de inferência responde às consultas dos usuários e determina automaticamente as conclusões possíveis.</p><p>Com base nessa situação, assinale a alternativa que apresenta corretamente o paradigma de programação utilizado e uma linguagem que o implementa, respectivamente. </p>",
+    "correct_answer": "Paradigma Lógico; Prolog.",
+    "incorrect_answers": [
+      "Paradigma Orientado a Objetos; Java.",
+      "Paradigma Funcional; Haskell.",
+      "Paradigma Imperativo; C.",
+      "Paradigma Estruturado; Pascal."
+    ]
+  },
+  {
+    "type": "multiple",
+    "question": "<p>Durante o processo de otimização de consultas em bancos de dados relacionais, o otimizador pode aplicar regras de equivalência da álgebra relacional para gerar planos alternativos semanticamente equivalentes, porém potencialmente mais eficientes. Considere a seguinte transformação:</p><blockquote>R ⋈S ≡ S ⋈R</blockquote><p>Essa transformação permite alterar a ordem das relações envolvidas na operação de junção, sem modificar o resultado final da consulta. Essa técnica de otimização baseada em reescrita algébrica é conhecida como</p>",
+    "correct_answer": "comutatividade.",
+    "incorrect_answers": [
+      "associatividade.",
+      "distributividade.",
+      "idempotência.",
+      "absorção."
+    ]
+  },
+  {
+    "type": "multiple",
+    "question": "<p>Um professor IFCE está orientando os alunos em atividades práticas sobre bancos de dados relacionais. O docente apresenta duas tabelas no sistema do IFCE:</p><ul><li>docentes (id_docente, nome, cargo, departamento);</li><li>projetos (id_projeto, id_docente, nome_projeto, tipo_projeto).</li></ul><p>Ele solicita aos alunos que expressem uma consulta para obter o nome e o cargo de todos os docentes do departamento “Técnicas de Computação” que não participam de nenhum projeto externo, utilizando cálculo relacional.</p><p>Com base nessas informações, assinale a alternativa que apresenta corretamente a expressão em cálculo relacional que atende à solicitação do docente.</p>",
+    "correct_answer": "{d.nome, d.cargo | Docentes(d) ∧ d.departamento = &quot;Técnicas de Computação&quot; ∧ ¬∃p (Projetos(p) ∧ p.id_docente = d.id_docente ∧ p.tipo_projeto = &quot;Externo&quot;)}",
+    "incorrect_answers": [
+      "{d.nome, d.cargo | Docentes(d) ∨ ¬∃p (Projetos(p) ∧ p.id_docente = d.id_docente ∧ p.tipo_projeto = &quot;Externo&quot;)}",
+      "{d.nome, d.cargo | ∃d Docentes(d) ∧ ∃p (Projetos(p) ∧ p.id_docente = d.id_docente ∧ p.tipo_projeto ≠ &quot;Externo&quot;) }",
+      "{d.nome, d.cargo | Docentes(d) ∧ ∃p (Projetos(p) ∧ p.id_docente = d.id_docente ∧ p.tipo_projeto = &quot;Externo&quot;)}",
+      "{d.nome, d.cargo | Docentes(d) ∧ d.departamento = &quot;Técnicas de Computação&quot; ∧ ∃p (Projetos(p) ∧ p.id_docente = d.id_docente ∧ p.tipo_projeto ≠ &quot;Externo&quot;)}"
+    ]
+  },
+  {
+    "type": "multiple",
+    "question": "<p>Considere o seguinte trecho de código simples:</p><blockquote>{ x &gt; 0 }</blockquote><blockquote>y := x + 1</blockquote><blockquote>{ y &gt; 1 }</blockquote><p>A pré-condição { x &gt; 0 } garante que, depois da execução da instrução y := x + 1, a pós-condição {y &gt; 1} será satisfeita, permitindo raciocinar formalmente sobre a correção do programa sem executá-lo.</p><p>Com base nessa abordagem, qual é o tipo de semântica formal utilizada para relacionar pré condições e pós-condições e raciocinar sobre a correção do programa?</p>",
+    "correct_answer": "Semântica axiomática.",
+    "incorrect_answers": [
+      "Semântica operacional.",
+      "Semântica denotacional.",
+      "Semântica natural.",
+      "Semântica composicional."
+    ]
+  },
+  {
+    "type": "multiple",
+    "question": "<p>A mineração de dados envolve técnicas utilizadas para descobrir padrões e relações em grandes volumes de dados, podendo empregar métodos supervisionados ou não supervisionados. Considerando esses conceitos, informe se é verdadeiro (V) ou falso (F) o que se afirma a seguir e assinale a alternativa com a sequência correta.</p><p>(&nbsp;&nbsp;) Classificação é uma técnica não supervisionada cujo objetivo é prever uma classe categórica a partir dos dados analisados.</p><p>(&nbsp;&nbsp;) Regressão é uma técnica supervisionada utilizada para prever um valor numérico contínuo com base em um conjunto de dados previamente rotulados.</p><p>(&nbsp;&nbsp;) Clusterização é uma técnica não supervisionada que visa agrupar objetos similares sem a utilização de rótulos prévios.</p><p>(&nbsp;&nbsp;) Regras de associação buscam identificar relações do tipo “Se X ocorre, então Y tende a ocorrer”, sendo o algoritmo k-NN (k-Nearest Neighbors, ou k-vizinhos mais próximos) um dos métodos comumente utilizados para esse fim.</p>",
+    "correct_answer": "F - V - V - F.",
+    "incorrect_answers": [
+      "V - V - F - F.",
+      "F - F - V - V.",
+      "V - F - V - F.",
+      "F - V - F - V."
+    ]
+  },
+  {
+    "type": "multiple",
+    "question": "<p>Um professor IFCE apresenta aos estudantes duas relações em um banco de dados acadêmico:</p><blockquote>Docentes (id_docente, nome, cargo, departamento)</blockquote><blockquote>Projetos (id_projeto, id_docente, nome_projeto, tipo_projeto)</blockquote><p>O docente solicita a construção de uma consulta que retorne o nome e o cargo dos docentes do departamento “Engenharia de Computação” que não participam de projetos externos, utilizando operações da álgebra relacional.</p><p>Diante desse contexto, assinale a alternativa que apresenta a combinação de operações que atende corretamente ao solicitado.</p>",
+    "correct_answer": "Seleção (σ) sobre o departamento “Engenharia de Computação”, seguida de projeção (π) nos atributos nome e cargo e diferença (-) com a relação de projetos externos.",
+    "incorrect_answers": [
+      "Produto cartesiano (×) entre docentes e projetos, seguido de união (∪) com os docentes do departamento “Engenharia de Computação” e projeção (π) nos atributos nome e cargo.",
+      "Diferença (-) entre a relação de todos os docentes e a relação de projetos, seguida de projeção (π) nos atributos nome e cargo. ",
+      "União (∪) de todos os docentes com o departamento “Engenharia de Computação”, seguida de junção (⋈) com a relação de projetos, e seleção (σ) por nome e cargo.",
+      "Projeção (π) nos atributos nome e cargo, seguida de diferença (-) entre projetos e docentes, sem seleção sobre o departamento."
+    ]
+  },
+  {
+    "type": "multiple",
+    "question": "<p>No contexto de sistemas operacionais, diferentes técnicas podem ser utilizadas para realizar o gerenciamento de operações de entrada e saída (E/S). Algumas técnicas permitem que a CPU (Central Processing Unit) seja liberada para executar outras tarefas enquanto aguarda a conclusão da operação, já outras exigem verificação constante do estado do dispositivo.</p><p>Tendo isso em vista, considere que uma CPU verifica continuamente se o dispositivo terminou a operação de E/S, checando repetidamente o estado do controlador até que a operação seja concluída. Essa técnica de gerenciamento de E/S é denominada</p>",
+    "correct_answer": "polling.",
+    "incorrect_answers": [
+      "interrupção.",
+      "DMA (Direct Memory Access).",
+      "spooling.",
+      "buffering."
+    ]
+  },
+  {
+    "type": "multiple",
+    "question": "<p>Um professor IFCE orienta estudantes na implementação de funções genéricas que operam sobre diferentes tipos de dados. O docente apresenta uma função que calcula a média de uma coleção de valores, podendo ser aplicada a inteiros, números de ponto flutuante ou outros tipos numéricos, sem alterar a lógica do cálculo.</p><p>Qual é o tipo de polimorfismo envolvido nessa situação?</p>",
+    "correct_answer": "Polimorfismo paramétrico.",
+    "incorrect_answers": [
+      "Polimorfismo por subtipo.",
+      "Polimorfismo ad-hoc.",
+      "Polimorfismo restrito.",
+      "Polimorfismo estático."
+    ]
+  },
+  {
+    "type": "multiple",
+    "question": "<p>No desenvolvimento de algoritmos, a recursividade pode ser classificada em diferentes tipos, de acordo com a forma como as chamadas recursivas ocorrem. Nesse sentido, considere que uma função, durante sua execução, realiza uma chamada para ela mesma, ou seja, a própria função invoca diretamente sua definição em seu corpo.</p><p>Essa situação caracteriza qual tipo de recursividade?</p>",
+    "correct_answer": "Recursão direta.",
+    "incorrect_answers": [
+      "Recursão indireta.",
+      "Recursão mútua.",
+      "Recursão linear.",
+      "Recursão estrutural."
+    ]
+  }
+]
