@@ -1,0 +1,98 @@
+[
+  {
+    "type": "multiple",
+    "question": "<p>Identifique o nível de linguagem predominante no trecho a seguir:</p><blockquote>&quot;Aí apareceu dona Amélia.</blockquote><blockquote>(...)</blockquote><blockquote>— O que foi que Vitorino contou ao coronel, dona Amélia?</blockquote><blockquote>— Ouvi uma história de eleição com o mestre José Amaro no meio. Este José Amaro é homem muito malcriado. O meu pai dizia que o velho Amaro, pai dele, tinha um crime de morte em Goiana.</blockquote><blockquote>— Dona Amélia, a senhora não tenha cuidado, eu vou dar cobro a isto. Vitorino não se emenda. Leva a vida neste fuxicado dos diabos.&quot;</blockquote><p class=\"ql-align-right\"><sub>REGO, José Lins do. Fogo morto. Rio de janeiro, 1995.</sub></p>",
+    "correct_answer": "Nível popular.",
+    "incorrect_answers": [
+      "Nível médio.",
+      "Nível elevado.",
+      "Nível técnico."
+    ]
+  },
+  {
+    "type": "multiple",
+    "question": "<p>Identifique o nível de linguagem predominante no trecho a seguir:</p><blockquote>&quot;— É o seguinte: naquele dia, eu fiz aquela pergunta a fim de bagunçar a sua aula.</blockquote><blockquote>— Por quê?</blockquote><blockquote>— Porque eu pensava que o senhor era igual aos outros professores.</blockquote><blockquote>— Igual como?</blockquote><blockquote>— Não sei explicar. Acho que o senhor chega mais perto de nós. Eu gostei muito daquele barato do senhor falar quem o senhor era e mandar a gente papear sobre a gente mesmo. Sabe, aqui na escola, a gente tem pouca chance de falar. Só ouve e escreve no caderno.</blockquote><blockquote>— Tudo certo, Antônio. Não tenho nenhuma bronca de você. Você falou o que quis, do modo que achou melhor, e não tenho por que me chatear com isso. Posso até não gostar do que você disse, mas falar é um direito seu. Mas vamos deixar este papo pra lá.&quot;</blockquote><p class=\"ql-align-right\"><sup>LEAL, José Carlos. Professor, valeu! Belo Horizonte: Lê, 1992.</sup></p>",
+    "correct_answer": "Nível popular.",
+    "incorrect_answers": [
+      "Nível médio.",
+      "Nível elevado.",
+      "Nível técnico."
+    ]
+  },
+  {
+    "type": "multiple",
+    "question": "<p>Identifique o nível de linguagem predominante no trecho a seguir:</p><blockquote class=\"ql-align-center\"><strong><u>De onde veio a água da Terra</u></strong></blockquote><blockquote>&quot;O pesquisador Michael Zolensky, do Centro Espacial Johnson, da Nasa, descobriu os primeiros traços de água em meteoritos. Estudando um desses pedregulhos cósmicos, que caiu em 1998 na cidade de Monahans, no Estado americano do Texas, Zolensky encontrou cristais de sal que, entre seus átomos, continham algumas moléculas de H₂O. Zolensky imagina que, durante a formação do Sistema Solar, havia grande quantidade de oxigênio e de hidrogênio nessa região do espaço. Esses átomos estavam misturados às partículas de gás e poeira que deram origem aos planetas.&quot;</blockquote><p class=\"ql-align-right\"><sup>Superinteressante, out. 1999.</sup></p>",
+    "correct_answer": "Nível técnico.",
+    "incorrect_answers": [
+      "Nível popular.",
+      "Nível médio.",
+      "Nível elevado."
+    ]
+  },
+  {
+    "type": "multiple",
+    "question": "<p>Identifique o nível de linguagem predominante no trecho a seguir:</p><blockquote>&quot;Estácio montou o cavalo. Consultou o relógio; eram sete horas e meia.</blockquote><blockquote>— Permite que o acompanhe? perguntou Helena.</blockquote><blockquote>— Com uma condição, disse ele; é que há de ter juízo. Não quero temeridades; a égua é aparentemente mansa, convém não brincar com ela. Já vejo que você é capaz de muitas coisas mais...</blockquote><blockquote>— Prometo ir pacificamente.</blockquote><blockquote>Helena cumprimentou a tia com um gesto gracioso, deu de rédea ao animal e seguiu ao lado do irmão.&quot;</blockquote><p class=\"ql-align-right\"><sup>ASSIS, Machado de. Helena. Rio de Janeiro: Ediouro, 1995.</sup></p>",
+    "correct_answer": "Nível elevado.",
+    "incorrect_answers": [
+      "Nível popular.",
+      "Nível médio.",
+      "Nível técnico."
+    ]
+  },
+  {
+    "type": "multiple",
+    "question": "<p>Identifique o nível de linguagem predominante no trecho a seguir:</p><blockquote>&quot;Acabei o capítulo — o 15º —, deixei o escritório, passei no quarto, notei algumas mudanças — Ana tinha colocado cortinas, trocado a luminária —, coloquei minha melhor roupa e fui para a varanda aguardar a chegada de Ana da Polygram. Às oito em ponto ela abriu a porta.</blockquote><blockquote>— Demorei?</blockquote><blockquote>— Foi britânica. Poxa, como você está bem!</blockquote><blockquote>— Você também, não mudou nada.</blockquote><blockquote>— Quanto tempo, hein, Ana!</blockquote><blockquote>— Pois é... quanto tempo! Duas semanas... Como é que está o escritório?</blockquote><blockquote>— Uma zorra. E o Rio?</blockquote><blockquote>— Outra. A última novidade no Brasil é o aumento da gasolina.&quot;</blockquote><p class=\"ql-align-right\">NOVAES, Carlos Eduardo. A cadeira do dentista e outras crônicas. São Paulo: Ática, 1995.</p>",
+    "correct_answer": "Nível médio.",
+    "incorrect_answers": [
+      "Nível elevado.",
+      "Nível técnico.",
+      "Nível popular."
+    ]
+  },
+  {
+    "type": "multiple",
+    "question": "<p>Identifique o nível de linguagem predominante no trecho a seguir:</p><blockquote>&quot;Ficara-lhe agradecido, depois da cena da estrebaria. E, com o acolhimento sertanejo:</blockquote><blockquote>— Abolete-se, moço. Tome a tipóia.</blockquote><blockquote>A pouco trecho, assomou o feitor, sempre lampeiro, como se andasse no rastro do estudante.</blockquote><blockquote>O dono da casa encrespou a fisionomia e disse secamente:</blockquote><blockquote>— Está da banda de fora porque quer...</blockquote><blockquote>Manuel Broca sentou-se nos três vezes. calcanhares.</blockquote><blockquote>— Menina, deixa ver a luz - berrou Valentim.</blockquote><blockquote>E Soledade trouxe a lamparina acesa, resguardando os olhos da claridade pobre.</blockquote><blockquote>Chegou bamba de sono e ficou no meio da sala, indecisa:</blockquote><blockquote>— Eu me descuidei e peguei numa madorna...&quot;</blockquote><p class=\"ql-align-right\"><sup>ALMEIDA, José Américo de. A bagaceira. Rio de Janeiro: José Olympio, 1965.</sup></p>",
+    "correct_answer": "Nível elevado.",
+    "incorrect_answers": [
+      "Nível médio.",
+      "Nível técnico.",
+      "Nível popular."
+    ]
+  },
+  {
+    "type": "multiple",
+    "question": "(Fafeod-MG) Identifique a opção que apresenta expressão de linguagem popular:",
+    "correct_answer": "&quot;A Onça preta da Noite tá bebendo água no rio...&quot;",
+    "incorrect_answers": [
+      "&quot;Eu sou um deus automático que tudo faz e des-faz.&quot;",
+      "&quot;Ora são onças pintadas que saltam no seu caminho.&quot;",
+      "&quot;Na igreja de Sabará um Cristo nu chora ouro...&quot;",
+      "&quot;Um caçador, mais a oeste, caçou veado a chumbo de ouro.&quot;"
+    ]
+  },
+  {
+    "type": "multiple",
+    "question": "(Fafeod-MG) Mário de Andrade só não infringe os preceitos da língua-padrão na frase:",
+    "correct_answer": "&quot;Cumpri-nos, entretanto, iniciar estas linhas de saudades e muito amor, com desagradável nova.&quot;",
+    "incorrect_answers": [
+      "&quot;— Vai, sobrinho, si tu não dá crédito então praquê pergunta!&quot;",
+      "&quot;Estava muito contrariado porque não compreendia o silêncio.&quot;",
+      "&quot;— Não insulte ela não, auaí! Taina-Cã é bom.&quot;",
+      "&quot;já tinha gente lá, gente direita, gente pobre, advogados, garçons, pedreiros, meias-colheres, deputados, gatunos, todas essas gentes.&quot;"
+    ]
+  },
+  {
+    "type": "multiple-correct",
+    "question": "(UFSC / 2003) Identifique as proposições nas quais se faz uso da linguagem coloquial:",
+    "correct_answer": [
+      "Indigestão. Tá anotado, doutor.",
+      "Mandei todos eles praquele lugar.",
+      "Teve um sacana que deu o serviço, contando pro patrão o meu movimento de conscientização."
+    ],
+    "incorrect_answers": [
+      "Não gostei disso, senhoras, senhores e senhoritas, autoridades civis, militares e eclesiásticas.",
+      "Vou lhes contar como morri.",
+      "Eu me exaltei e iniciei um movimento reivindicatório."
+    ]
+  }
+]
